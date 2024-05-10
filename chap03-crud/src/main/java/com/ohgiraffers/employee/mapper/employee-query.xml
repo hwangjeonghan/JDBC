@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+
+<properties>
+    <comment />
+    <entry key="employeeAll">
+        SELECT
+        EMP_ID,
+        EMP_NAME,
+        PHONE,
+        DEPT_CODE,
+        JOB_CODE,
+        SALARY,
+        ENT_YN
+        FROM EMPLOYEE
+        WHERE ENT_YN = 'N'
+    </entry>
+    <entry key="employeeFindByName">
+        SELECT
+            EMP_ID,
+            EMP_NAME,
+            PHONE,
+            DEPT_CODE,
+            JOB_CODE,
+            SALARY,
+            ENT_YN
+         FROM EMPLOYEE
+        WHERE EMP_NAME = ?
+        AND ENT_YN = 'N'
+
+    </entry>
+
+        <entry key="employeeFindById">
+            SELECT
+            EMP_ID,
+            EMP_NAME,
+            PHONE,
+            DEPT_CODE,
+            JOB_CODE,
+            SALARY,
+            ENT_YN
+            FROM EMPLOYEE
+            WHERE EMP_NAME = ?
+            AND ENT_YN = 'N'
+        </entry>
+<entry key="empInsert">
+    INSERT EMPLOYEE
+    (
+        ENP_ID,
+        ENP_NAME,
+        ENP_NO,
+        JOB_CODE,
+        SAL_LEVEL
+    )VALUES(
+        ?,
+        ?,
+        ?,
+        ?,
+        ?
+    )
+
+
+
+
+</entry>
+    <entry key="empModify">
+        UPDATE EMPLOYEE
+            SET EMP_NAME = ?
+        WHERE EMP_ID = ?
+    </entry>
+
+</properties>
